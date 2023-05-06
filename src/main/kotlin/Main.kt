@@ -2,6 +2,7 @@ fun main() {
     println(identity("Angee Angela", 23, "Kenya"))
     println(name("Naserian Saigilu"))
     myName("Shayen Denzel")
+    replaceVowels()
 
 }
 //1. Write a function that takes in 3 parameters, name, age, and country, and
@@ -28,9 +29,9 @@ fun myName(name:String){
 }
 //4. Write a Kotlin function that takes in a string will all the vowels replaces
 // by the character ‘*’. Use string interpolation to generate the output. (2 points)
-fun vowel(name2: String){
-    var name2 = "Terian"
-    var x = name2.replace(name2[1],'*', name2[3], '*', name2[4], '*')
-    println(x)
-
+fun replaceVowels(){
+    var name = "Terian"
+    var m = name.replace(Regex("[aeiou]")){"*"}
+    println("My name is $m")
 }
+
